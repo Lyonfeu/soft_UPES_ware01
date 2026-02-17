@@ -10,14 +10,14 @@ import csv
 
 
 def read(filename):
-    """"
+    """
      how it works:
                     You create a variable (dictionary) like " data= read(filename)"
                     data is a dictionary containing the data in the csv file
 
         This form is optimous because it mimics the way a exel file would be anlysed
 
-    """"
+    """
     try:
         with open(filename, "r") as file:
             reader = csv.DictReader(file)
