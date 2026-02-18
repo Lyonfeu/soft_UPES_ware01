@@ -55,3 +55,27 @@ def write(filename, data, fieldnames):
         print("File written successfully.")
     except Exception as e:
         print("Error writing file:", e)
+
+
+
+
+def get_fieldnames (data)
+    """
+    Intermediate function of function add_up() that take a dictionary
+    data and give back a list of the filesname of data  
+    """
+    result=[]
+    for Key in data.key():
+        result.append(Key)
+    return result;*
+
+
+
+
+    
+
+def transfer(filename1,filename2):
+    data=read(filename1)
+    field_names=get_fieldnames(data)
+    write(filename1, data, field_names)
+    
