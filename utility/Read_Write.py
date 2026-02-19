@@ -58,7 +58,6 @@ def write(filename, data, fieldnames):
 
 
 
-
 def get_fieldnames (data)
     """
     Intermediate function of function add_up() that take a dictionary
@@ -67,7 +66,7 @@ def get_fieldnames (data)
     result=[]
     for Key in data.key():
         result.append(Key)
-    return result;*
+    return result;
 
 
 
