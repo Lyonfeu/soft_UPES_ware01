@@ -31,7 +31,7 @@ def xor_encrypt_file(input_path, output_path, password):
     print("Done encrypting")
 
 
-def encrypt_local( path, password):
+def encrypt( path, password):
     """
     This function takes a path to file and encrypt the file.
 
@@ -42,7 +42,7 @@ def encrypt_local( path, password):
 
 
 
-def decrypt_local(path, password):
+def decrypt(path, password):
     """
     This function takes a path to a encrypted file and decrypt it.
 
