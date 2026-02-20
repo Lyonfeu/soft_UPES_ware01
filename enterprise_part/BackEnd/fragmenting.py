@@ -31,11 +31,7 @@ def add_up (filename, number_of_intermediate):
         rand2= rand_in_one(number_of_intermediate)
         
         for i in range(number_of_intermediate):
-            write(filename[:-4] + "_part_" + str(i) , format_data(new_data ,
-                                                                  rand[i] ,
-                                                                  rand1[i]) ,
-                  get_fieldnames(data)
-              )
+            R.write(filename[:-4] + "_part_" + str(i) , format_data(new_data ,rand[i] , rand2[i]) ,get_fieldnames(data))
 
     
             
@@ -44,7 +40,7 @@ def add_up (filename, number_of_intermediate):
 
 
 
-def get_fieldnames (data)
+def get_fieldnames (data):
     """
     Intermediate function of function add_up() that take a dictionary
     data and give back a list of the filesname of data  
@@ -56,7 +52,7 @@ def get_fieldnames (data)
 
 
 
-def format_data ( data, rand1, rand2)
+def format_data ( data, rand1, rand2):
 
     """
     This function take a data and 2 numbers and muiltiply the data by rand1 and
@@ -66,8 +62,7 @@ def format_data ( data, rand1, rand2)
     result = {}
 
     for key, values in data.items():
-        result[key] =
-        {
+        result[key] ={
             "average": values["average"] * rand1,
             "count": values["count"] * rand2
         }
@@ -81,7 +76,6 @@ def format_data ( data, rand1, rand2)
 
 
     
-
 
 
 
@@ -116,8 +110,7 @@ def compute_stats(data):
             count = len(values)
             avg = sum(values) / count
 
-        result[category] =
-        {
+        result[category] ={
             "average": avg,
             "count": count
         }
@@ -131,14 +124,3 @@ def compute_stats(data):
 
 
 
-
-
-
-
-
-
-
-
-
-
-print(number(7))

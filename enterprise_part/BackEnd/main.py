@@ -1,0 +1,34 @@
+import os
+import encrypt_local
+import decrypt_local
+import fragmenting
+import encrypt_wide
+import sending_to_intermediate
+import utility.Read_Write as R
+
+def main():
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    filename = "salaires.csv"
+    path_to_file = os.path.join(current_dir, filename)
+
+    print("Starting prototype test")
+
+
+    # --- Chiffrement local ---
+    print("[1] Chiffrement local...")
+    encrypt_local.encrypt_local(path_to_file)
+
+    # --- Déchiffrement local ---
+    print("[2] Déchiffrement local...")
+    decrypt_local.decrypt_local(path_to_file)
+
+    print("[3] Fragmentation...")
+    fragmenting.add_up(path_to_file, 3)
+
+
+
+    print("\nProcess done successfully")
+
+
+if __name__ == "__main__":
+    main()
