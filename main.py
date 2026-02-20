@@ -68,3 +68,29 @@ import server_part.BackEnd.receive
 #
 # last, we decrypt
 
+def main():
+ 
+    filename = "salaires.csv"
+    path_to_file = "enterprise_part/data/salaires.csv"
+
+    print("Starting prototype test")
+
+
+    # --- Chiffrement local ---
+    print("[1] Encryption local...")
+    encrypt_local.encrypt_local(path_to_file)
+
+    # --- Déchiffrement local ---
+    print("[2] Decryption local...")
+    decrypt_local.decrypt_local(path_to_file)
+
+    print("[3] Fragmentation...")
+    fragmenting.add_up(path_to_file, 3)
+
+
+
+    print("\nProcess done successfully")
+
+
+if __name__ == "__main__":
+    main()
