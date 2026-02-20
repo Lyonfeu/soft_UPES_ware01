@@ -15,11 +15,11 @@ def main():
 
 
     # --- Chiffrement local ---
-    print("[1] Chiffrement local...")
+    print("[1] Encryption local...")
     encrypt_local.encrypt_local(path_to_file)
 
     # --- Déchiffrement local ---
-    print("[2] Déchiffrement local...")
+    print("[2] Decryption local...")
     decrypt_local.decrypt_local(path_to_file)
 
     print("[3] Fragmentation...")
