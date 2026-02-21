@@ -23,16 +23,12 @@ def add_up (filename, number_of_intermediate):
     filename_part_x where x goes from 0 to n-1
     """
     data= R.read(filename)
-    print(type(data))
     new_data= compute_stats(data)
-
     for Key in new_data.keys():
-
         rand= rand_in_one(number_of_intermediate)
-        rand2= rand_in_one(number_of_intermediate)
-        
+        rand2= rand_in_one(number_of_intermediate)        
         for i in range(number_of_intermediate):
-            R.write(filename[:-4] + "_part_" + str(i) , format_data(new_data ,rand[i] , rand2[i]) ,get_fieldnames(data))
+            R.write(filename[:-4] + "_part_" + str(i)+".csv", format_data(new_data ,rand[i] , rand2[i]) ,get_fieldnames(data))
 
     
             
@@ -59,16 +55,17 @@ def format_data ( data, rand1, rand2):
     This function take a data and 2 numbers and muiltiply the data by rand1 and
     rand2 in desired way.
 
-    """    
-    result = {}
-
+    """
+    rows=[]
     for key, values in data.items():
-        result[key] ={
-            "average": values["average"] * rand1,
-            "count": values["count"] * rand2
-        }
-
-    return result   
+        rows.append(
+                    {
+                    "Category": key,
+                    "Average": values["average"] * rand1,
+                    "Count": values["count"] * rand2
+                    }
+                   )
+    return rows   
 
 
 
@@ -102,7 +99,6 @@ def compute_stats(data):
         
     """
     result = {}
-    print(type(data))
     for category, values in data.items():
         if len(values) == 0:
             avg = 0
