@@ -2,26 +2,28 @@
 #
 # enterprise part
 
-import enterprise_part.BackEnd.decrypt_local
-import enterprise_part.BackEnd.encrypt_local
-import enterprise_part.BackEnd.encrypt_wide
-import enterprise_part.BackEnd.fragmenting
-import enterprise_part.BackEnd.sending_to_intermediate
+import enterprise_part.BackEnd.decrypt_local as decrypt_local
+import enterprise_part.BackEnd.encrypt_local as encrypt_local
+import enterprise_part.BackEnd.encrypt_wide as encrypt_wide
+import enterprise_part.BackEnd.fragmenting as fragmenting
+import enterprise_part.BackEnd.sending_to_intermediate as sending_to_intermediate
 
 
 # intermediate part
- import intermediate_part.BackEnd.compute_data
+"""import intermediate_part.BackEnd.compute_data
   import intermediate_part.BackEnd.decrypt_wide
    import intermediate_part.BackEnd.encrypt_wide
     import intermediate_part.BackEnd.receive
      import intermediate_part.Backend.sending_to_main
-
+"""
 # main server part
-import server_part.BackEnd.compute
+
+
+"""import server_part.BackEnd.compute
 import server_part.BackEnd.decrypt_wide
 import server_part.BackEnd.encrypt_wide
 import server_part.BackEnd.receive
-
+"""
 
 
 # init phase

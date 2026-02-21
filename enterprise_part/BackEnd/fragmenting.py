@@ -9,7 +9,7 @@ def rand_in_one( numb):
     linked chain of n element of wich add up to one
 
     """
-    numbers = [random.random() for _ in range(numb)]
+    numbers = [random() for i in range(numb)]
     total = sum(numbers)
     return [x / total for x in numbers]
 
@@ -23,9 +23,10 @@ def add_up (filename, number_of_intermediate):
     filename_part_x where x goes from 0 to n-1
     """
     data= R.read(filename)
+    print(type(data))
     new_data= compute_stats(data)
 
-    for Key in new_data.key():
+    for Key in new_data.keys():
 
         rand= rand_in_one(number_of_intermediate)
         rand2= rand_in_one(number_of_intermediate)
@@ -46,7 +47,7 @@ def get_fieldnames (data):
     data and give back a list of the filesname of data  
     """
     result=[]
-    for Key in data.key():
+    for Key in data.keys():
         result.append(Key)
     return result;
 
@@ -101,7 +102,7 @@ def compute_stats(data):
         
     """
     result = {}
-
+    print(type(data))
     for category, values in data.items():
         if len(values) == 0:
             avg = 0
@@ -116,11 +117,6 @@ def compute_stats(data):
         }
 
     return result
-
-
-
-
-
 
 
 

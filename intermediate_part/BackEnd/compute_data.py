@@ -10,7 +10,6 @@ def compute(path_in,path_out):
     , respecting the mathematically logical value of each category.
 
     warning: all path_in must have the same lines
-
     TO USE:
 
     compute(path_in, path_out)
@@ -22,7 +21,6 @@ def compute(path_in,path_out):
         data=R.read(path_in)
         data2=R.read(path_out)
         result = {}
-
         for key in data:
             result[key] =
             {
