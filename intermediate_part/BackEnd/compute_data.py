@@ -1,4 +1,4 @@
-import utility.Read_write as R
+import utility.Read_Write as R
 
 
 def compute(path_in,path_out):
@@ -22,10 +22,8 @@ def compute(path_in,path_out):
         data2=R.read(path_out)
         result = {}
         for key in data:
-            result[key] =
-            {
+            result[key] ={
                 "average": data[key]["average"] + data2[key]["average"],
-                "count": data[key]["count"] + data2[key]["count"]
-            }
+                "count": data[key]["count"] + data2[key]["count"]}
         R.write(path_out,result,R.get_fieldnames(result))
 

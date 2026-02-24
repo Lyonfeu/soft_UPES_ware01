@@ -10,12 +10,12 @@ import enterprise_part.BackEnd.sending_to_intermediate as sending_to_intermediat
 
 
 # intermediate part
-"""import intermediate_part.BackEnd.compute_data
-  import intermediate_part.BackEnd.decrypt_wide
-   import intermediate_part.BackEnd.encrypt_wide
-    import intermediate_part.BackEnd.receive
-     import intermediate_part.Backend.sending_to_main
-"""
+import intermediate_part.BackEnd.compute_data
+import intermediate_part.BackEnd.decrypt_wide
+import intermediate_part.BackEnd.encrypt_wide
+import intermediate_part.BackEnd.receive
+import intermediate_part.Backend.sending_to_main
+
 # main server part
 
 
