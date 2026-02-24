@@ -56,7 +56,7 @@ def read(file_path):
 
 
 
-def write(filename, data, fieldnames):
+def write(filename, data):
     """
     To add something to a csv file, please use this syntax:
 
@@ -70,28 +70,15 @@ def write(filename, data, fieldnames):
     write("people.csv", data, fieldnames)
 
     """
-    
-
     try:
+        fieldnames = list(data[0].keys())
+
         with open(filename, "w", newline="") as file:
             writer = csv.DictWriter(file, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(data)
-        print("File written successfully.")
     except Exception as e:
         print("Error writing file:", e)
-
-
-
-def get_fieldnames (data):
-    """
-    Intermediate function of function add_up() that take a dictionary
-    data and give back a list of the filesname of data  
-    """
-    result=[]
-    for Key in data.keys():
-        result.append(Key)
-    return result;
 
 
 

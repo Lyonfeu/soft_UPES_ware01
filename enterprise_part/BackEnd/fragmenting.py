@@ -28,27 +28,11 @@ def add_up (filename, number_of_intermediate):
         rand= rand_in_one(number_of_intermediate)
         rand2= rand_in_one(number_of_intermediate)        
         for i in range(number_of_intermediate):
-            R.write(filename[:-4] + "_part_" + str(i)+".csv", format_data(new_data ,rand[i] , rand2[i]) ,get_fieldnames(data))
+            a=format_data(new_data, rand[i],rand2[i])
+            R.write(filename[:-4] + "_part_" + str(i)+".csv", a )
 
     
             
-
-
-
-
-
-def get_fieldnames (data):
-    """
-    Intermediate function of function add_up() that take a dictionary
-    data and give back a list of the filesname of data  
-    """
-    result=[]
-    for Key in data.keys():
-        result.append(Key)
-    return result;
-
-
-
 def format_data ( data, rand1, rand2):
 
     """
