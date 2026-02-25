@@ -2,6 +2,10 @@
 			Using Multi-Party Computation and Functional Encryption
  	Project Overview
 
+
+
+
+
 This project is a software engineering prototype that demonstrates how multiple companies can collaboratively benchmark employee salaries without revealing any individual salary data.
 
 The system computes global statistics (average, median, minimum, maximum ....) while preserving confidentiality at every stage of the computation.
@@ -116,3 +120,4 @@ Show data analysis
 	 Conclusion
 
 This prototype demonstrates that confidential salary benchmarking is feasible using modern cryptographic paradigms. By combining MPC and Functional Encryption, the system ensures data privacy throughout the entire lifecycle of computation and result disclosure.
+
